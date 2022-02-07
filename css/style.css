@@ -1,0 +1,914 @@
+/* BASIC */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: ubuntu, sans-serif;
+    font-weight: 100;
+    background-color: #34a0a4;
+    color: #e1f1a7;
+}
+
+/* --- --- --- HEADER (hd) --- --- --- */
+
+.header{
+    grid-area: hd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #144367;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.header__logo{
+    margin-left: 1rem;
+}
+
+.header__logo__link{
+    max-width: 90px;
+}
+
+.header__nav{
+    margin-right: 1rem;
+}
+
+.header__nav__list{
+    display: flex;
+    font-style: italic;
+    text-align: center;
+    list-style: none;
+}
+
+.header__nav--link{
+    display: inline-block;
+    line-height: 90px; 
+    padding: 0 9px;
+    transition: background .6s; 
+}
+
+.header__nav--link a{
+    display: inline-block;
+    color: #e1f1a7;
+    text-decoration: none;
+}
+
+.header__nav--link:hover{
+    background: #1e6091; 
+    transition: background .6s;  
+    cursor: pointer;
+}
+
+/* --- --- --- INDEX (ti,di,vi,bi,mi) --- --- --- */
+
+.title--index{
+    grid-area: ti;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/oceania_playa.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.title__title--index{
+    font-size: 4rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.title__phrase--index{
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.description--index{
+    grid-area: di;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/oceania_mujer.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.description--index p{
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.video--index{
+    grid-area: vi;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+.video--index iframe{ 
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.reservar--index{
+    grid-area: bi;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/oceania_terraza.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.btn{
+    background: #144367;
+    color: #e1f1a7;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: background .6s;
+    animation: btn_animation 2s infinite both;
+}
+
+.btn:hover{
+    background: #52b69a;
+    transition: background .6s;
+}
+
+@keyframes btn_animation {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+.map--index{
+    grid-area: mi;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+.map--index iframe{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- --- --- HOSPEDAJE (th,hb,hs,a1,a2) --- --- --- */
+
+.title--hospedaje{
+    grid-area: th;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/hospedaje_chez.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.title--hospedaje h1{
+    color: #e1f1a7;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.hospedaje--buscavida{
+    grid-area: hb;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/hospedaje_buscavida.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: scale(0.9, 0.9);
+    transition: transform 2s;
+}
+
+.hospedaje--buscavida:hover{
+    transform: scale(1, 1);
+}
+
+.hospedaje--buscavida a{
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.hospedaje--buscavida p{
+    text-align: center;
+    padding: 1rem;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.hospedaje--silvia{
+    grid-area: hs;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/hospedaje_silvia.jpg);
+    background-position: center;
+    background-size: cover;
+    transform: scale(0.9, 0.9);
+    transition: transform 2s;
+}
+
+.hospedaje--silvia:hover{
+    transform: scale(1, 1);
+}
+
+.hospedaje--silvia a{
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.hospedaje--silvia p{
+    text-align: center;
+    padding: 1rem;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.airbnb--uno{
+    grid-area: a1;
+    display: grid;
+}
+
+.airbnb--dos{
+    grid-area: a2;
+    display: grid;    
+}
+
+.airbnb--tres{
+    grid-area: a3;
+    display: grid;   
+}
+
+.airbnb--container{
+    flex-flow: row wrap;
+    overflow: hidden;
+}
+
+/* --- --- --- RESTAURANTES (tr, dr1, vr1) --- --- --- */
+
+.title--restaurantes{
+    grid-area: tr;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/restaurante.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.title--restaurantes h1{
+    color: #e1f1a7;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.description--perla{
+    grid-area: dr1;
+    display: grid;
+    justify-items: center;
+    align-content: flex-start;
+    overflow: hidden;
+    background-image: url(../img/restaurant_laperla.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.description--perla a{
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.description--perla p{
+    padding: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.video--perla{
+    grid-area: vr1;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+.video--perla iframe{ 
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- --- --- QUE HACER (tq, cq, qh1, qh2, vq1, vq2) --- --- --- */
+
+.title--quehacer{
+    grid-area: tq;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/guitarrista.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.title--quehacer h1{
+    color: #e1f1a7;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.calendario{
+    grid-area: cq;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.calendario table, th, td {
+    border: 2px solid #144367;
+    text-align: center;
+}
+
+.description--cabo{
+    grid-area: qh1;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/quehacer_cabo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.description--cabo h2{
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.description--cabo p{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.description--cabalgatas{
+    grid-area: qh2;
+    display: grid;
+    justify-items: center;
+    align-content: flex-start;
+    overflow: hidden;
+    background-image: url(../img/quehacer_cabalgatas.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.description--cabalgatas h2{
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.description--cabalgatas p{
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem;
+    color: #34a0a4;
+    text-shadow: 1px -1px #e1f1a7;
+}
+
+.video--cabo{
+    grid-area: vq1;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+.video--cabo iframe{ 
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.video--cabalgatas{
+    grid-area: vq2;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+.video--cabalgatas iframe{ 
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- --- --- CONTACTO (tc, fm)--- --- --- */
+
+.title--contacto{
+    grid-area: tc;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/oso_marino.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.title--contacto h1{
+    color: #e1f1a7;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.formulario{
+    grid-area: fm;
+    display: grid;
+    padding: 3rem;
+}
+
+
+/* --- --- --- ASIDE (as) --- --- --- */
+
+.aside{
+    grid-area: as;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+}
+
+.aside--img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* --- --- --- FOOTER (ft) --- --- --- */
+
+.footer{
+    grid-area: ft;
+    display: flexbox;
+    justify-items: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: linear-gradient(#1e6091, #b5e48c);
+}
+
+.footer__enlaces{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.footer__enlaces--l1{
+    max-width: 250px;
+}
+
+.footer__enlaces--l2{
+    width: 250px;
+    height: 60px;
+}
+
+.footer__enlaces--l3{
+    max-width: 250px;
+}
+
+.footer__contacto{
+    padding-bottom: 1rem;
+}
+
+.footer__contacto p{
+    color: #144367;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- --- --- MEDIA QUERIES --- --- --- */
+
+/* --- DESKTOP --- */
+
+@media only screen and (min-width: 769px){
+
+    #grid-index {
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-template-rows: 15vh 60vh 60vh 60vh 30vh;
+        grid-template-areas: "hd hd hd"
+                             "ti ti ti"
+                             "di vi as"
+                             "bi mi as"
+                             "ft ft ft";
+        grid-gap: 0.5rem;
+    }
+    
+    #grid-hospedaje {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 15vh 30vh 60vh 85vh 30vh;
+        grid-template-areas: "hd hd hd hd hd hd"
+                             "th th th th th th"
+                             "hb hb hb hs hs hs"
+                             "a1 a1 a2 a2 a3 a3"
+                             "ft ft ft ft ft ft";
+        grid-gap: 0.5rem;
+    }
+    
+    #grid-restaurantes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15vh  30vh 60vh 30vh;
+        grid-template-areas: "hd hd"
+                             "tr tr"
+                             "dr1 vr1"
+                             "ft ft";
+        grid-gap: 0.5rem;
+    }
+    
+    #grid-quehacer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15vh  30vh 30vh 60vh 60vh 30vh;
+        grid-template-areas: "hd hd"
+                             "tq tq"
+                             "cq cq"
+                             "qh1 vq1"
+                             "vq2 qh2"
+                             "ft ft";
+        grid-gap: 0.5rem;
+    }
+    
+    #grid-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh  30vh 45vh 30vh;
+        grid-template-areas: "hd"
+                             "tc"
+                             "fm"
+                             "ft";
+        grid-gap: 0.5rem;
+    }
+
+    .aside{
+        background-image: url(../img/publicidad_colorado_desktop.png);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .aside--img{
+        display: none;
+    }
+}
+
+/* --- TABLET --- */
+
+@media only screen and (min-width: 426px) and (max-width:768px){
+    
+    #grid-index {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15vh 60vh 60vh 60vh 30vh 30vh;
+        grid-template-areas: "hd hd"
+                             "ti ti"
+                             "di vi"
+                             "bi mi"
+                             "as as"
+                             "ft ft";
+        grid-gap: 0.3rem;
+    }
+    
+    #grid-hospedaje {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15vh 30vh 60vh 85vh 85vh 30vh;
+        grid-template-areas: "hd hd"
+                             "th th"
+                             "hb hs"
+                             "a1 a2"
+                             "a3 ."
+                             "ft ft";
+        grid-gap: 0.3rem;
+    }
+
+    .hospedaje--buscavida{
+        transform: none;
+    }
+    
+    .hospedaje--silvia{
+        transform: none;
+    }
+    
+    #grid-restaurantes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15vh 30vh 60vh 30vh;
+        grid-template-areas: "hd hd"
+                             "tr tr"
+                             "dr1 vr1"
+                             "ft ft";
+        grid-gap: 0.3rem;
+    }
+
+    .description--perla a{
+        font-size: 1.4rem;
+    }
+    
+    #grid-quehacer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 15vh  30vh 30vh 60vh 60vh 30vh;
+        grid-template-areas: "hd hd"
+                             "tq tq"
+                             "cq cq"
+                             "qh1 vq1"
+                             "vq2 qh2"
+                             "ft ft";
+        grid-gap: 0.3rem;
+    }
+    
+    #grid-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15vh  30vh 45vh 30vh;
+        grid-template-areas: "hd"
+                             "tc"
+                             "fm"
+                             "ft";
+        grid-gap: 0.3rem;
+    }
+
+}
+
+/* --- MOVIL --- */
+
+@media only screen and (min-width: 320px) and (max-width: 425px){
+    
+    .header{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .header__logo__link{
+        display: none;
+    }
+
+    .header__nav__list{
+        display: block;
+    }
+    
+    .header__nav--link{
+        display: block;
+        line-height: 40px; 
+        margin: 0.7rem;
+    }
+    
+    .header__nav--link a{
+        display: block;
+    }
+    
+    .header__nav--link:hover{
+        background: #1e6091; 
+        transition: background .6s;  
+        cursor: pointer;
+    }
+
+    #grid-index {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60vh 60vh 60vh 60vh 60vh 30vh 60vh 60vh;
+        grid-template-areas: "ti" "hd" "di" "vi" "bi" "as" "mi" "ft";
+        grid-gap: 0.3rem;
+    }
+
+    .title__title--index{
+        font-size: 2.5rem;
+    }
+    
+    .title__phrase--index{
+        font-size: 1rem;
+    }
+
+    .description--index p{
+        font-size: 0.8rem;
+    }
+    
+    #grid-hospedaje {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60vh 60vh 60vh 60vh 60vh 60vh 60vh 60vh;
+        grid-template-areas: "th" "hb" "hs" "a1" "a2" "a3" "hd" "ft";
+        grid-gap: 0.3rem;
+    }
+    
+    .title--hospedaje h1{
+        font-size: 2.5rem;
+    }
+    
+    .hospedaje--buscavida{
+        transform: none;
+    }
+
+    .hospedaje--buscavida p{
+        font-size: 0.8rem;
+    }
+    
+    .hospedaje--silvia{
+        transform: none;
+    }
+    
+    .hospedaje--silvia p{
+        font-size: 0.8rem;
+    }
+
+    .airbnb--container{
+        flex-direction: column;
+    }
+
+    .airbnb{
+        transform-origin: left;
+    }
+    
+    #grid-restaurantes {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60vh 60vh 60vh 60vh 60vh;
+        grid-template-areas: "tr" "dr1" "vr1" "hd" "ft";
+        grid-gap: 0.3rem;
+    }
+
+    .title--restaurantes h1{
+        font-size: 2.5rem;
+    }
+    
+    .description--perla a{
+        font-size: 1.2rem;
+    }
+    
+    .description--perla p{
+        font-size: 0.9rem;
+    }
+    
+    #grid-quehacer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60vh 60vh 60vh 60vh 60vh 60vh 60vh 60vh;
+        grid-template-areas: "tq" "cq" "qh1" "vq1" "qh2" "vq2" "hd" "ft";
+        grid-gap: 0.3rem;
+    }
+
+    .title--quehacer h1{
+        font-size: 2.5rem;
+    }
+    
+    .calendario table, th, td {
+        font-size: 0.8rem;
+    }
+    
+    .description--cabo{
+        grid-area: qh1;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        overflow: hidden;
+        background-image: url(../img/quehacer_cabo.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .description--cabo h2{
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    
+    .description--cabo p{
+        font-size: 0.9rem;
+    }
+    
+    .description--cabalgatas h2{
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    
+    .description--cabalgatas p{
+        font-size: 0.9rem;
+    }
+    
+    #grid-contacto {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60vh 50vh 60vh 60vh;
+        grid-template-areas: "tc" "fm" "hd" "ft";
+        grid-gap: 0.3rem;
+    }
+
+    .title--contacto h1{
+        font-size: 2.5rem;
+    }
+    
+    .formulario{
+        padding: 1rem;
+    }
+
+    .footer__enlaces{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1rem;
+    }
+
+    .footer__enlaces--l1{
+        padding: 0.5rem;
+    }
+    
+    .footer__enlaces--l2{
+        display: none;
+    }
+    
+    .footer__enlaces--l3{
+        padding: 0.5rem;
+    }
+
+}
+
+@media only screen and (min-width: 1px) and (max-width: 319px){
+    .header{
+        display: none;
+    }
+}

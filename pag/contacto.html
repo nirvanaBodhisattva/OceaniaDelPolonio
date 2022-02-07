@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body id="grid-contacto">
+    <header id="hd" class="header">
+        <div class="header__logo">
+            <a href="../index.html"><img src="../img/logo_oceania.png" alt="logo del sitio" class="header__logo__link"></a>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav--link"><a href="../index.html">Portada</a></li>
+                <li class="header__nav--link"><a href="../pag/hospedaje.html">Hospedaje</a></li>
+                <li class="header__nav--link"><a href="../pag/restaurantes.html">Restaurantes</a></li>
+                <li class="header__nav--link"><a href="../pag/quehacer.html">Que Hacer?</a></li>
+                <li class="header__nav--link"><a href="../pag/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="tc" class="title--contacto">
+        <h1>Contacto</h1>
+    </section>
+    <div id="fm" class="formulario">
+        <form action="" method="get" enctype="text/plain">
+            <fieldset>
+                <legend>Informacion Personal</legend>
+                <div>
+                    <label id="visita">Ha visitado Rocha?</label>
+                    <input type="radio" name="campovis" id="visita">Si
+                    <input type="radio" name="campovis" id="visita">No, pero lo hare
+                </div>
+                <div>
+                    <label id="nombre">Nombre</label>
+                    <input type="text" name="camponombre" id="nombre"> 
+                </div>
+                <div> 
+                   <label for="correo">Correo Electronico</label>
+                   <input type="email" name="campocorreo" id="correo"> 
+                </div>
+                <div>
+                   <label for="origen">Nacionalidad</label>
+                   <select name="origen">
+                       <option value="ar">Argentino</option>
+                       <option value="br">Brasileno</option>
+                       <option value="py">Paraguayo</option>
+                       <option value="cl">Chileno</option>
+                       <option value="other">Otro</option>
+                   </select>
+                </div>
+                <div>
+                   <label for="condition">Terminos y condiciones</label>
+                   <input type="checkbox" name="campocondition" id="condition" required>
+                </div>
+                <div> 
+                   <input type="submit" value="Enviar"> 
+                   <input type="reset" value="Borrar">
+                </div>
+            </fieldset>
+       </form>
+    </div>
+  <footer id="ft" class="footer">
+    <div class="footer__enlaces">
+      <a href="https://turismo.gub.uy/" target="_blank"><img src="../img/logo_uruguaynatural.png" alt="marca pais del uruguay con enlace a su sitio oficial de turismo" class="footer__enlaces--l1"></a>
+      <a href="http://turismorocha.gub.uy/" target="_blank"><img src="../img/logo_rocha.svg" alt="logo turismo rocha con enlace a sitio oficial de turismo rochense" class="footer__enlaces--l2"></a>
+      <a href="http://coderhouse.com/" target="_blank"><img src="../img/logo_coderhouse.png" alt="logo de coderhouse con enlace a su sitio oficial" class="footer__enlaces--l3"></a>
+    </div>
+    <div class="footer__contacto">
+      <p>Creado por Miguel Rubio | eduardorubio.do@gmail.com | +1 970-452-7672</p>
+    </div>
+  </footer>
+</body>
+</html>
