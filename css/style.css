@@ -100,17 +100,14 @@ body{
     justify-items: center;
     align-content: center;
     overflow: hidden;
-    background-image: url(../img/oceania_mujer.jpg);
-    background-position: center;
-    background-size: cover;
+    background-color: #1e6091;
 }
 
 .description--index p{
     padding: 1rem;
     font-weight: bold;
     text-align: center;
-    color: #34a0a4;
-    text-shadow: 1px -1px #e1f1a7;
+    color: #e1f1a7;
 }
 
 .video--index{
@@ -238,16 +235,18 @@ body{
     text-decoration: none;
     text-align: center;
     padding: 0.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: #34a0a4;
+    color: #1e6091;
     text-shadow: 1px -1px #e1f1a7;
 }
 
 .hospedaje--buscavida p{
     text-align: center;
     padding: 1rem;
-    color: #34a0a4;
-    text-shadow: 1px -1px #e1f1a7;
+    font-size: 1.2rem;
+    color: #e1f1a7;
+    text-shadow: 1px -1px #1e6091;
 }
 
 .hospedaje--silvia{
@@ -272,16 +271,18 @@ body{
     text-decoration: none;
     text-align: center;
     padding: 0.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: #34a0a4;
+    color: #1e6091;
     text-shadow: 1px -1px #e1f1a7;
 }
 
 .hospedaje--silvia p{
     text-align: center;
     padding: 1rem;
-    color: #34a0a4;
-    text-shadow: 1px -1px #e1f1a7;
+    font-size: 1.2rem;
+    color: #e1f1a7;
+    text-shadow: 1px -1px #1e6091;
 }
 
 .airbnb--uno{
@@ -328,27 +329,30 @@ body{
     grid-area: dr1;
     display: grid;
     justify-items: center;
-    align-content: flex-start;
+    align-content: center;
     overflow: hidden;
-    background-image: url(../img/restaurant_laperla.jpg);
-    background-position: center;
-    background-size: cover;
+    background-color: #1e6091;
+    transform: scale(0.9, 0.9);
+    transition: transform 2s;
+}
+
+.description--perla:hover{
+transform: scale(1, 1);
 }
 
 .description--perla a{
     text-decoration: none;
     padding: 1rem;
     font-size: 2rem;
-    color: #34a0a4;
-    text-shadow: 1px -1px #e1f1a7;
+    color: #b5e48c;
 }
 
 .description--perla p{
     padding: 1rem;
     text-align: center;
     font-weight: bold;
-    color: #34a0a4;
-    text-shadow: 1px -1px #e1f1a7;
+    color: #e1f1a7;
+    font-size: 1.2rem;
 }
 
 .video--perla{
@@ -391,10 +395,11 @@ body{
     align-content: center;
     overflow: hidden;
     padding: 1rem;
+    background-color: #1e6091;
 }
 
 .calendario table, th, td {
-    border: 2px solid #144367;
+    border: 2px solid #b5e48c;
     text-align: center;
 }
 
